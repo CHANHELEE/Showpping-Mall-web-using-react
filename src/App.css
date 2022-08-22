@@ -1,1 +1,49 @@
+body{
+  height: 100vh;
+}
+.login-button{
+  display: flex;
+  justify-content: end;
+  margin:30px;
+}
 
+.logo{
+  display: flex;
+  justify-content: center;
+}
+
+.menu{
+  display: flex;
+  list-style-type: none;
+  position: relative;
+}
+
+.menu li{
+  padding: 10px;
+}
+
+.menuArea{
+  display: flex;
+  justify-content:center;
+}
+
+.search{
+
+  position: relative;
+  display: flex;
+  gap:5px;
+  margin-top:10px;
+  /* margin-left: 250px; */ 
+}
+
+.search input{
+  border: 0px;
+  border-bottom: 2px solid gray;
+  width: 93.2px;
+  height: 30.5px;
+}
+
+.search div{
+  /* margin-right: 5px; */
+  margin-top:13px;
+}
