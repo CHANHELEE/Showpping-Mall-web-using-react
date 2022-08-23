@@ -1,10 +1,20 @@
 body{
   height: 100vh;
 }
+
+body a {
+  all:initial;
+  color: black;
+}
+
+
+
 .login-button{
   display: flex;
   justify-content: end;
   margin:30px;
+  gap:5px;
+  cursor: pointer;
 }
 
 .logo{
@@ -29,11 +39,11 @@ body{
 
 .search{
 
-  position: relative;
+
   display: flex;
   gap:5px;
-  margin-top:10px;
-  /* margin-left: 250px; */ 
+  margin-top:5px;
+  /* margin-left: 200px;  */
 }
 
 .search input{
@@ -41,9 +51,48 @@ body{
   border-bottom: 2px solid gray;
   width: 93.2px;
   height: 30.5px;
+  
+
 }
 
 .search div{
-  /* margin-right: 5px; */
-  margin-top:13px;
+  
+margin-top: 5px;
+}
+
+.product-img{
+  border-radius: 9px;
+  width:264px;
+  height:396px;
+}
+
+.product-img:hover{
+  width:300px;
+  height:450px;
+  transition: 0.5ms;
+}
+
+.login-form{
+  width: 60%;
+  margin:0 auto;
+
+}
+
+.detail-container{
+  display: flex;
+  justify-content: center;
+
+}
+
+.detail-container img{
+  width: 300px;
+  
+}
+
+/* .detail-text {
+  margin-left: 10px;
+}  */
+
+.detail-row{
+  width: 800px;;
 }
