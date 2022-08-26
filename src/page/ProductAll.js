@@ -1,5 +1,5 @@
 import React from 'react'
-import ProductCard from '../component/ProductCard.js'
+import ProductCard from '../component/ProductCard'
 import { useEffect,useState } from 'react'//api 호출은 useEffect 사용
 import { Container,Row,Col } from 'react-bootstrap';
 import { useSearchParams } from 'react-router-dom';
