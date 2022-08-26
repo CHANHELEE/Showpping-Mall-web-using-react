@@ -1,6 +1,6 @@
 # Showpping-Mall-web-using-react  
     
-  - URL :   
+  - URL :  https://hnm-page-using-react.netlify.app
 
   1.유저는 메뉴와 상품들을 볼 수 있다.  
 
