@@ -4,14 +4,12 @@ import { Container,Row,Col,Form } from 'react-bootstrap';
 import {useParams} from "react-router-dom";
 const ProductDetail = () => {
   const {id}=useParams();
-  console.log(id)
-  const [item , setItem]= useState([]);
+  const [item , setItem]= useState(null);
 
   let getDetailItem= async ()=>{
-    let url = new URL(`http://localhost:3004/products/${id}`);
+    let url = new URL(`https://my-json-server.typicode.com/CHANHELEE/Showpping-Mall-web-using-react/products/${id}`);
     let response = await fetch(url);
     let data = await response.json();
-    console.log(data);
     setItem(data);
 
   }
@@ -25,15 +23,15 @@ const ProductDetail = () => {
 
   return (
 
-      <div className="detail-container">
-        <Row className="detail-row"> 
-          <Col lg={5} >
-            <img src={item.img} />
+      <Container>
+        <Row> 
+          <Col lg={5} className="product-img">
+            <img src={item?.img} />
           </Col> 
 
-          <Col lg={7} className="detail-text">
-            <div>{item.title}</div>
-            <div>{item.price}</div>
+          <Col lg={7}className="product-detail">
+            <div>{item?.title}</div>
+            <div>{item?.price}</div>
 
             <Form.Select aria-label="Default select example">
               <option>Open this select menu</option>
@@ -45,7 +43,7 @@ const ProductDetail = () => {
             <button>추가</button>
           </Col>
         </Row>
-        </div>
+        </Container>
 
 
   )

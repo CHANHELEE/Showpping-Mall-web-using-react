@@ -8,7 +8,7 @@ const ProductCard = ({product}) => {
   } 
 
   return (
-    <div onClick={showDetail}>
+    <div onClick={showDetail} key={product} className="product-card">
           <img src={product.img} className="product-img"></img>
           <div>{product.title}</div>
           <div>{product.price}</div>
