@@ -1,12 +1,11 @@
-import Login from './Page/Login';
-import ProductAll from './Page/ProductAll';
-import ProductDetail from './Page/ProductDetail';
+import Login from './page/Login';
+import ProductAll from './page/ProductAll';
 import {useState,useEffect} from 'react';
-import Navbar from './Component/Navbar';
+import Navbar from './component/Navbar';
 import {Route,Routes,useNavigate} from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import PrivateRouter from './PrivateRoute/PrivateRouter';
+import PrivateRouter from './privateRoute/PrivateRouter';
 /**
  *1.유저는 메뉴와 상품들을 볼 수 있다.
   1-2 . 네비게이션바(헤더)  
