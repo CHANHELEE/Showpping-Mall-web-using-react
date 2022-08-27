@@ -1,19 +1,21 @@
 import React from 'react'
 import ProductCard from '../component/ProductCard'
 import { useEffect,useState } from 'react'//api 호출은 useEffect 사용
+import { useSelector } from 'react-redux';
 import { Container,Row,Col } from 'react-bootstrap';
+import {productAction} from '../redux/actions/productAction'
+import { useDispatch } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
 const ProductAll = () => {
-  const[products,setProducts]= useState([]);
+  const products = useSelector(state=>state.product.productList);
   const [query,setQuery]=useSearchParams();
-
-  const getProducts = async () =>{
+  const dispatch = useDispatch();
+  const getProducts =  () =>{
     let searchQuery = query.get('q') || "";    
     console.log(searchQuery);
-    let url = new URL(`https://my-json-server.typicode.com/CHANHELEE/Showpping-Mall-web-using-react/products?q=${searchQuery}`);
-    let response = await fetch(url);
-    let data = await response.json();
-    setProducts(data);
+    dispatch(productAction.getProduct(searchQuery));
+    // setProducts(data);
+    
   }
   useEffect(() =>
   {
